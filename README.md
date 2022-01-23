@@ -5,8 +5,8 @@ This site is not useful but decorative for people who have several screens and w
 Here is an example with the Youtube widget !
 <p align="right">Music : <a href="https://youtu.be/FSnuF1FPSIU">bossa uh by potsu</a></p>
 Ideas for improvement:
-* Create a weather app
 
+* Create a weather app
 * Add a music app
 * Include a notepad
 * Possibility to change the font
