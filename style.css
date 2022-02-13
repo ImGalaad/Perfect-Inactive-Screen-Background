@@ -1,0 +1,247 @@
+/*  ___    ____
+   /   |  / / /
+  / /| | / / / 
+ / ___ |/ / /  
+/_/  |_/_/*/
+
+* {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #111111;
+  z-index: 1;
+}
+/*  ____  __          
+   / __ )/ /_  _______
+  / __  / / / / / ___/
+ / /_/ / / /_/ / /    
+/_____/_/\__,_/*/
+
+.theme-normal {
+  --blur-: blur(0);
+}
+
+.theme-blur {
+  --blur-: blur(2px);
+}
+
+.theme-switch-wrapper {
+  position: absolute;
+  bottom: 8px;
+  left: 30px;
+  transform: translate(-50%, 0);
+  z-index: 5;
+}
+ 
+.theme-switch {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+}
+ 
+.theme-switch input {
+  display:none;
+}
+ 
+.slider {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 1s;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  -moz-border-radius: 5px;
+  background-color: aliceblue;
+  -webkit-border-radius: 5px;
+}
+ 
+.slider:before {
+  left: 4px;
+  bottom: 4px;
+  content: "";
+  width: 26px;
+  height: 26px;
+  transition: .4s;
+  position: absolute;
+  background-color: aliceblue;
+}
+ 
+input:checked + .slider {
+  background-color: aliceblue;
+}
+ 
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* _____                 ____   __              
+  / ___/______________  / / /  / /_  ____ ______
+  \__ \/ ___/ ___/ __ \/ / /  / __ \/ __ `/ ___/
+ ___/ / /__/ /  / /_/ / / /  / /_/ / /_/ / /    
+/____/\___/_/   \____/_/_/  /_.___/\__,_/*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #353538;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #969696;
+}
+
+/* _____ ___     __         
+  / ___// (_)___/ /__  _____
+  \__ \/ / / __  / _ \/ ___/
+ ___/ / / / /_/ /  __/ /    
+/____/_/_/\__,_/\___/*/
+
+.slider-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; 
+  text-align: center;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  bottom: 0;
+}
+
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #ffffff49;
+  border-radius: 50px;
+  margin: 0 2px 5px;
+}
+.menu label:hover {
+  background: #ffffff;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: var(--blur-);
+  top: 0;
+  left: 100%;
+  z-index: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: left 0s 1s;
+}
+
+[id*="slide"]:checked + .slide {
+  left: 0;
+  z-index: 1;
+  transition: left .65s cubic-bezier(0,1,1,.99);
+}
+
+.slide-1 {background-image: url("wallpapers/1.jpg");}
+.slide-2 {background-image: url("wallpapers/2.jpg");}
+.slide-3 {background-image: url("wallpapers/3.jpg");}
+.slide-4 {background-image: url("wallpapers/4.jpg");}
+.slide-5 {background-image: url("wallpapers/5.jpg");}
+.slide-6 {background-image: url("wallpapers/6.jpg");}
+.slide-7 {background-image: url("wallpapers/7.jpg");}
+.slide-8 {background-image: url("wallpapers/8.jpg");}
+.slide-9 {background-image: url("wallpapers/9.jpg");}
+.slide-10 {background-image: url("wallpapers/10.jpg");}
+.slide-11 {background-image: url("wallpapers/11.jpg");}
+.slide-12 {background-image: url("wallpapers/12.jpg");}
+.slide-13 {background-image: url("wallpapers/13.jpg");}
+.slide-14 {background-image: url("wallpapers/14.jpg");}
+.slide-15 {background-image: url("wallpapers/15.jpg");}
+
+/* ________           __  
+  / ____/ /___  _____/ /__
+ / /   / / __ \/ ___/ //_/
+/ /___/ / /_/ / /__/ ,<   
+\____/_/\____/\___/_/|*/
+
+.date {
+  font-size: 40px;
+}
+
+.clock {
+    font-size: 120px;
+}
+
+.wrapper-clock {
+    color: aliceblue;
+    text-align: center;
+}
+
+/*       __                                
+| |     / /________ _____  ____  ___  _____
+| | /| / / ___/ __ `/ __ \/ __ \/ _ \/ ___/
+| |/ |/ / /  / /_/ / /_/ / /_/ /  __/ /    
+|__/|__/_/   \__,_/ .___/ .___/\___/_/     
+                 /_/   /*/
+
+.wrapper{
+  top: 50%;
+  left: 50%;
+  z-index: 8;
+  max-width: auto;
+  position: absolute;
+  border-radius: 10px;
+  background: 0;
+  transform: translate(-50%, -50%);
+  cursor: move;
+}
+
+.wrapper i {
+  transform: translate(0, 3px);
+}
+
+.wrapper section.notepad{
+  font-size: 20px;
+  padding: 10px 30px;
+}
+
+.wrapper section.notepad i:hover{
+  color: black;
+}
+
+.wrapper .content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 30px 40px 30px;
+}
+
+.content .title{
+  margin: 15px 0;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.content p{
+  font-size: 16px;
+  text-align: center;
+}
